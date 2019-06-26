@@ -8,7 +8,8 @@ export default class Button extends React.Component {
 		onClick: PropTypes.func.isRequired,
 		label: PropTypes.string
 	};
-	selection = (type) => {
+
+	selectIcon = (type) => {
 		switch (type){
 			case 'add':
 				return <IconAddMark className={styles.icon} />;
@@ -17,13 +18,14 @@ export default class Button extends React.Component {
 				return <IconAddMark className={styles.icon} />;
 		}
 	};
+
 	render() {
 		const { onClick, type, className } = this.props;
-		console.log('TCL: Button -> render -> className', className);
+		// console.log('TCL: Button -> render -> className', className);
 		return (
 			<div className={styles.main}>
 				<button onClick={onClick} className={styles.button + ' ' + className}>
-					{this.seletIcon(type)}
+					{this.selectIcon(type)}
 				</button>
 			</div>
 		);

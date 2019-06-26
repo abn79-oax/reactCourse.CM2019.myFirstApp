@@ -3,10 +3,10 @@ import styles from './Input.module.scss';
 
 export default class Button extends React.Component {
 	render() {
-		const { input, onChange } = this.props;
+		const { value,onChange, type } = this.props;
 		return (
 			<div className={styles.main}>
-				<input className={styles.default} value={input} onChange={onChange} />
+				<input type={type} className={styles.default} value={value} onChange={onChange} />
 			</div>
 		);
 	}

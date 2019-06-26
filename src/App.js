@@ -127,21 +127,21 @@ class App extends React.PureComponent {
 				<p className={styles.title}>¡Bienvenidos al curso de programación de cómputo móvil!</p>
 				
 				<div className={styles.container_boards}>
-					<board
+					<Board
 						object={family}
 						onAddButtonClick={() => this.onAddButtonClick('family')}
 						onRemoveButtonClick={() => this.onRemoveButtonClick('family')}
 						onAddInputChange={(event) => this.onAddInputChange(event,'family')}
 						onRemoveItem={(index) => this.onRemoveItem(index,'family')}
 					/>
-					<board
+					<Board
 						object={drinks}
 						onAddButtonClick={() => this.onAddButtonClick('drinks')}
 						onRemoveButtonClick={() => this.onRemoveButtonClick('drinks')}
 						onAddInputChange={(event) => this.onAddInputChange(event,'drinks')}
 						onRemoveItem={(index) => this.onRemoveItem(index,'drinks')}
 					/>
-					<board
+					<Board
 						object={friends}
 						onAddButtonClick={() => this.onAddButtonClick('friends')}
 						onRemoveButtonClick={() => this.onRemoveButtonClick('friends')}

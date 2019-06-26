@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from './List.module.scss';
+import {IconXMark} from '../../resources/svg/Icons';
 
 class List extends React.Component {
 	state = {
@@ -18,7 +19,10 @@ class List extends React.Component {
 				<ul className={styles.list}>
 					{items.map((item, i) => (
 						<li key={i} className={index === i ? styles.item_selected:styles.item}>
-							{item}
+							<p className={styles.item_name}>{item}</p>
+							<div onClick={() => this.onConsole(i)}>
+								<IconXMark className={styles.icon}/>
+							</div>
 						</li>
 					))}
 				</ul>
