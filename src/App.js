@@ -4,6 +4,7 @@ import styles from './App.module.scss';
 import Input from './components/Input/Input';
 import Button from './components/Button/Button';
 import Board from './Board/Board';
+import AddBoard from './components/AddBoard/AddBoard';
 import produce from 'immer/dist/immer';
 
 class App extends React.PureComponent {
@@ -125,7 +126,9 @@ class App extends React.PureComponent {
 		return (
 			<div>
 				<p className={styles.title}>¡Bienvenidos al curso de programación de cómputo móvil!</p>
-				
+				<div>
+					<AddBoard />
+				</div>
 				<div className={styles.container_boards}>
 					<Board
 						object={family}
