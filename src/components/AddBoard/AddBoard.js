@@ -1,14 +1,17 @@
 import * as React from 'react';
 import styles from './AddBoard.module.scss';
+import { IconAddMark, IconRemoveMark } from '../../resources/svg/Icons';
+import Button from '../Button/Button';
+import Input from '../Input/Input';
 
-export default class Button extends React.Component {
+export default class AddBoard extends React.Component {
 	render() {
-		const { value,onChange, type } = this.props;
+		const { onAddBoard,name,onInputBoardChange } = this.props;
 		return (
 			<div className={styles.main}>
-				<input type={type} className={styles.default} value={value} onChange={onChange} />
-				<button>
-				</button>
+				<Input type={"text"} className={styles.default} value={name} onChange={onInputBoardChange} />
+				<Button className={styles.button} iconOfTheBoton={<IconAddMark/>} onClick={onAddBoard}>
+				</Button>
 			</div>
 		);
 	}

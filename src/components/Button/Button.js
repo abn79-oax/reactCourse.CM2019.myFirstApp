@@ -13,6 +13,8 @@ export default class Button extends React.Component {
 		switch (type){
 			case 'add':
 				return <IconAddMark className={styles.icon} />;
+			case 'minus':
+				return <IconRemoveMark className={styles.icon} />;
 
 			default:
 				return <IconAddMark className={styles.icon} />;

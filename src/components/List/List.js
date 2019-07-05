@@ -13,14 +13,14 @@ class List extends React.Component {
 	componentDidMount() {}
 
 	render() {
-		const { items, index } = this.props;
+		const { items, index,onRemoveItem } = this.props;
 		return (
 			<div className={styles.main}>
 				<ul className={styles.list}>
 					{items.map((item, i) => (
 						<li key={i} className={index === i ? styles.item_selected:styles.item}>
 							<p className={styles.item_name}>{item}</p>
-							<div onClick={() => this.onConsole(i)}>
+							<div onClick={() => onRemoveItem(i)}>
 								<IconXMark className={styles.icon}/>
 							</div>
 						</li>
