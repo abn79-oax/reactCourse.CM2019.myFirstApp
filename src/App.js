@@ -20,6 +20,7 @@ export default withRouter(
 						<RouteWithTitle exact title="Reporte" path="/reporte" component={Report} />
 						<RouteWithTitle exact title="Resumen" path="/Resumen" component={Summary} />
 						<RouteWithTitle exact title="Usuarios" path="/Usuarios" component={Users} />
+						<RouteWithTitle exact title="Fechas" path="/Fechas" component={Dates}/>
 						<Redirect to={'/inicio'} />
 					</Switch>
 				</div>
