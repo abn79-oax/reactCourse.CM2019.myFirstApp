@@ -7,6 +7,7 @@ import Boards from './screens/Boards/Boards'
 import Report from './screens/Report/Report';
 import Users from './screens/Users/Users';
 import Summary from './screens/Summary/Summary';
+import Dates from './screens/Date/Dates'
 
 export default withRouter(
 	class App extends React.PureComponent {
