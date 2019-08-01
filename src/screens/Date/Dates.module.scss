@@ -1,0 +1,38 @@
+.first_container,.second_container,.tercer_contenedor {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.first_container >div,
+.third_contenedor >div,
+.second_container > div {
+    padding: 10px;
+    border:1px solid #eaeaea;
+    flex:1;
+    text-align: center;
+}
+.export_buttons {
+    display: flex;
+    flex-direction: row;
+}
+.export_buttons > div > button {
+    height: 30px;
+    width: 100px;
+}
+.export_buttons > div {
+    
+    margin-left: 10px;
+    flex: 1;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.caption {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}

@@ -99,11 +99,11 @@ export default class Dates extends PureComponent{
                         <Calendario onDateChange={this.onDateChange}/>
                     </div>
                     <div className={styles.export_buttons}>
-                        <Button onClick={()=>{}} label={"PDF"}/>
-                        <Button onClick={()=>{}} label={"EXCEL"}/>
+                        <Button onClick={()=>{}} type={'pdf'} />
+                        <Button onClick={()=>{}} type={'excel'}/>
                     </div>
                 </div>
-                <div className={styles.second_container}>
+                {/*<div className={styles.second_container}>
                     {
                         this.state.boards.map((board,index)=>(
                             <div key={index}>
@@ -123,7 +123,7 @@ export default class Dates extends PureComponent{
                             llaves={["y1","y2"]} fill={["rgba(200,0,0,.3)","rgba(0,200,0,.3)"]} alto={150} ancho={600}
                         /> 
                     </div>
-                </div>
+                </div> */}
             </div>
         );
     }
