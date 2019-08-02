@@ -10,15 +10,15 @@ import produce from 'immer/dist/immer';
 class App extends React.PureComponent {
 	state = {
 		boards:[
-			{
-				title: 'Familia',
-				items: [ 'Chuchito', 'Juanita', 'Diego', 'Lucy' ],
-				index: 0,
-				input:{
-					add:'',
-					remove:''
-				}
-			}
+			// {
+			// 	title: 'Familia',
+			// 	items: [ 'Chuchito', 'Juanita', 'Diego', 'Lucy' ],
+			// 	index: 0,
+			// 	input:{
+			// 		add:'',
+			// 		remove:''
+			// 	}
+			// }
 		],
 		name:''	
 

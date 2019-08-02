@@ -2,7 +2,10 @@ import * as React from 'react';
 import styles from './Table.module.scss';
 import CurrencyFormat from 'react-currency-format';
 
+
 export default (class Table extends React.PureComponent {
+	state = {};
+
 	formatData = (data, type) => {
 		switch (type) {
 			case 'text':
@@ -16,6 +19,8 @@ export default (class Table extends React.PureComponent {
 		}
 	};
 
+	componentDidMount() { }
+
 	calculateFooter = (data, item) => {
 		switch (item.footer) {
 			case 'sum':
@@ -26,10 +31,11 @@ export default (class Table extends React.PureComponent {
 	};
 
 	render() {
-		const { headers, data } = this.props;
+		const { headers, data, caption } = this.props;
 		return (
 			<div className={styles.main}>
 				<table className={styles.table}>
+					<caption>{caption}</caption>
 					<thead className={styles.mainHeader}>
 						<tr className={styles.header}>
 							{headers.map((header, i) => {
@@ -42,26 +48,35 @@ export default (class Table extends React.PureComponent {
 						</tr>
 					</thead>
 					<tbody className={styles.body}>
-						{data.map((item, i) => {
-							return (
-								<tr key={i} className={styles.row}>
-									{headers.map((header, i) => {
-										return (
-											<td key={i} className={styles.row_item}>
-												{this.formatData(item[header.value], header.type)}
-											</td>
-										);
-									})}
-								</tr>
-							);
-						})}
+						{
+							data.summary.map((item, i) => {
+								item.quantity =(parseFloat(item["courtesies"]) + parseFloat(item["sold"]) + parseFloat(item["promos"]) );
+								return (
+									<tr key={i} className={styles.row}>
+										{
+											headers.map((header, i) => {
+											return (
+												<td key={i} className={styles.row_item}>
+													<span>
+														{this.formatData(item[header.value], header.type)}
+													</span>
+												</td>
+											);
+										})
+										}
+									</tr>
+								);
+							})
+						}
 					</tbody>
 					<tfoot className={styles.footer}>
 						<tr className={styles.footer_row}>
 							{headers.map((header, i) => {
 								return (
 									<td key={i} className={styles.footer_item}>
-										{this.formatData(this.calculateFooter(data, header), header.type)}
+										<span>
+											{this.formatData(this.calculateFooter(data, header), header.type)}
+										</span>
 									</td>
 								);
 							})}
