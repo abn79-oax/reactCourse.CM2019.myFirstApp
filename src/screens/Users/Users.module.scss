@@ -1,0 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+.country {
+	color: black;
+}
+.country:hover {
+	color: blue;
+	cursor: pointer;
+	outline: none;
+}
