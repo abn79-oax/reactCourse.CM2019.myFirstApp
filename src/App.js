@@ -7,7 +7,8 @@ import Boards from './screens/Boards/Boards'
 import Report from './screens/Report/Report';
 import Users from './screens/Users/Users';
 import Summary from './screens/Summary/Summary';
-import Dates from './screens/Date/Dates'
+import Dates from './screens/Date/Dates';
+import Exam from './screens/Exam/Exam';
 
 export default withRouter(
 	class App extends React.PureComponent {
@@ -22,6 +23,7 @@ export default withRouter(
 						<RouteWithTitle exact title="Resumen" path="/Resumen" component={Summary} />
 						<RouteWithTitle exact title="Usuarios" path="/Usuarios" component={Users} />
 						<RouteWithTitle exact title="Fechas" path="/Fechas" component={Dates}/>
+						<RouteWithTitle exact title="Examen" path="/Exam" component={Exam}/>
 						<Redirect to={'/inicio'} />
 					</Switch>
 				</div>

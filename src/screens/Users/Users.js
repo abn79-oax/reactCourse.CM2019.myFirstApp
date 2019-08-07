@@ -45,6 +45,10 @@ export default (class Users extends React.PureComponent {
 					})}
 				</ul>
 				<ul>
+					<li>
+						<img src={response.flag} className={styles.flag} alt="todo">
+						</img>
+					</li>
 					<li>País: {response && response.name} </li>
 					<li>Capital: {response && response.capital}</li>
 					<li>Población: {response && response.population} </li>

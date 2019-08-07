@@ -30,6 +30,9 @@ export default (class Topbar extends React.PureComponent {
 					<Link className={styles.item} to="/Fechas">
 						<li className={styles.item}> Fechas</li>
 					</Link>
+					<Link className={styles.item} to="/Exam">
+						<li className={styles.item}> Examen</li>
+					</Link>
 				</ul>
 			</div>
 		);

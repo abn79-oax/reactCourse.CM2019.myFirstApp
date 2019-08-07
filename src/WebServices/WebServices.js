@@ -22,8 +22,16 @@ export default {
 	},
 
 	async getWeatherByCityId({ cityId }) {
-		console.log('TCL: getWeatherByCityId -> cityId', cityId);
+		console.log('TCL: getWeatherByCityId -> cityId', urlWeatherApi + 'id=' + cityId + '&' + keyWeatherApi);
 		return await WebService.get(urlWeatherApi + 'id=' + cityId + '&' + keyWeatherApi);
+	},
+	async getWeatherByCityName({ cityName }) {
+		console.log('TCL: getWeatherByCityId -> cityName', cityName);
+		return await WebService.get(urlWeatherApi + 'name=' + cityName + '&' + keyWeatherApi);
+	},
+	async getWeatherByCityURL({ url }) {
+		console.log('Mi URL', url);
+		return await WebService.get(url);
 	},
 	async getCountryDetails({ country }) {
 		return await WebService.get(urlCountries + country + '?fullText=true');
